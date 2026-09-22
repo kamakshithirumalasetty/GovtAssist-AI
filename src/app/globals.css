@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --radius: 0.5rem;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white;
+  background-image: radial-gradient(at 0% 0%, rgba(224, 242, 254, 0.4) 0px, transparent 50%),
+                    radial-gradient(at 100% 100%, rgba(238, 242, 255, 0.4) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Glassmorphism utilities */
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-slate-200/80 shadow-sm rounded-xl;
+}
+
+.glass-header {
+  @apply bg-white/90 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-40;
+}
+
+.glass-card-hover {
+  @apply transition-all duration-200 hover:shadow-md hover:border-blue-300 hover:-translate-y-0.5;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
